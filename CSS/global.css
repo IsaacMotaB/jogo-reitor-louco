@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&display=swap");
+html {
+  scroll-behavior: smooth; }
+
+body {
+  background-image: url('/Background/FUNDO.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: cover;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+input,
+button {
+  padding: 10px;
+  width: -webkit-fill-available;
+}
+
+.loading {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loading i {
+  color: white;
+  margin-right: 0.5em;
+}
+
+.loading label {
+  font-size: 24px;
+  color: white;
+}
+
+
+/*.loading {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.loading label {
+  font-size: 24px;
+}*/
+
+input[type=email], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 13px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #00003C;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 4px;
+  font-size: 18px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #123069;
+  box-shadow: 4px 4px 0px #00000053;
+}
+
+.container h1 {
+  text-align: center;
+  font-size: 40px;
+  color: #ffffff;
+}
+
+
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: -5px;
+  color: #ffffff;
+}
+
+.create-account {
+  text-align: center;
+  margin-top: 30px;
+}
+
+
+button {
+  cursor: pointer;
+}
+
+button:active {
+opacity: 0.8;
+}
+
+button[disabled] {
+  opacity: 0.8;
+}
+
+button.fab {
+  width: 54px;
+  height: 54px;
+  border-radius: 50px;
+  border: none;
+  font-size: 24px;
+  box-shadow: 2px 2px 2px gray;
+}
+
+button.fab.fixed {
+  position: fixed;
+}
+
+button.fab.bottom {
+  bottom: 32px;
+}
+
+button.fab.right {
+  right: 32px;
+}
+
+.clear{
+  font-size: .9em;
+  color: #fff;
+  text-align:right;
+  margin: -5px 17px -5px;
+
+}
+
+.clear a {
+  color: #ff6d05;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.clear p a:hover{
+  text-decoration: underline;
+}
+/*
+.clear {
+  background: transparent;
+  font-size: .9em;
+  border: none;
+  color: #FFD700;
+  margin: -5px 80px 0px;
+
+
+}
+
+.clear:hover{
+  text-decoration: underline;
+
+}
+
+/*.outline {
+  background: transparent;
+  color: #ffffff;
+  border: none;
+}
+*/
+
+.outline{
+  font-size: .9em;
+  color: #ffffff;
+  text-align: center;
+  margin: 25px 0 10px;
+
+}
+
+.outline a {
+  color: #ff6d05;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.outline a:hover{
+  text-decoration: underline;
+}
+
+.error {
+  
+  color: white;
+  font-size: 12px;
+  margin-top: -5px;
+  margin-bottom: 10px; 
+  padding: 3px;
+  background-color: #1304dced;;
+  border-radius: 5px;
+  font-family: Arial, /*sans-serif*/;
+  font-weight: bold;
+  /*font-style: italic;*/
+  text-transform: uppercase;
+  display: none;
+} 
+

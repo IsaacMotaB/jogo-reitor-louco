@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Entre para Jogar</title>
+    <!-- site favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" sizes="16x16"><title>Entre para Jogar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-VtB5q3e5SZ1QVwS46UPiP7DozgYcBv7V4I4bZD7Vbu1/LglLHhxVwFapReRz7gCCPjef/tP83suWcnxnn3Z2Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+  </head>
+  <body>
+  <style>
+    .preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: -moz-linear-gradient(89deg, #5f16a9 0%, #0167f7 100%);
+  background-image: -webkit-linear-gradient(89deg, #5f16a9 0%, #0167f7 100%);
+  background-image: -ms-linear-gradient(89deg, #5f16a9 0%, #0167f7 100%);
+  z-index: 999;
+  overflow: hidden; }
+  .preloader .spinner {
+    margin: 100px auto;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    text-align: center;
+    -webkit-animation: sk-rotate 2s infinite linear;
+    animation: sk-rotate 2s infinite linear; }
+  .preloader .dot1, .preloader .dot2 {
+    width: 60%;
+    height: 60%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    background-color: #ffffff;
+    border-radius: 100%;
+    -webkit-animation: sk-bounce 2s infinite ease-in-out;
+    animation: sk-bounce 2s infinite ease-in-out; }
+  .preloader .dot2 {
+    top: auto;
+    bottom: 0;
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s; }
+
+@-webkit-keyframes sk-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-moz-keyframes sk-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-ms-keyframes sk-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@keyframes sk-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-webkit-keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0); }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1); } }
+@-moz-keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0); }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1); } }
+@-ms-keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0); }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1); } }
+@keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0); }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1); } }
+
+  </style>
+      
+
+        <!-- prealoader start  -->
+  <div class="preloader">
+    <div class="spinner">
+      <div class="dot1"></div>
+      <div class="dot2"></div>
+    </div>
+  </div>
+  <!-- prealoader end -->
+
+      <div class="container">
+        <form>
+          <h1>Login</h1>
+          <div class="form-field">
+              <div><label>Email:</label></div>
+              <input type="email" name="email" id="email" placeholder="Digite o seu email" onchange="onChangeEmail()"/>
+              <div class="error" id="email-required-error">O Email é obrigatório!</div>
+              <div class="error" id="email-invalid-error">O Email é inválido!</div>
+          </div>
+          <div class="form-field">
+              <div><label>Senha:</label></div>
+              <input type="password" name="password" id="password" placeholder="Senha" onchange="onChangePassword()"/>
+              <div class="error" id="password-required-error">A senha é obrigatória!</div>
+          </div>
+          <div class="clear">
+              <p>Digite o Email para <a href="#" id="recover-password-button" onclick="recoverPassword()" disabled="true">Recuperar a Senha</a></p>
+
+            </div>
+            <!---         <div class="clear">
+              <p>Digite seu email e <a href="#"  class="clear" id="recover-password-button" onclick="recoverPassword()" disabled="true">Recupere a Senha</a></p>
+            </div>---> 
+          <div>
+              <button type="button" class="solid" id="login-button" disabled="true" onclick="login()">Entrar</button>
+          </div>
+          <div class="outline">
+              <p>Não Tem Uma Conta?   <a href="/pages/register/register.html">Crie Uma!</a></p>
+            </div>    
+          </div>    
+      </form>
+      </div>
+      
+      
+      <link rel="stylesheet" href="./CSS/global.css">
+
+      <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+
+      <script src="/loginJS/firebase-init.js"></script>
+      <script src="/loginJS/index.js"></script>
+      <script src="/loginJS/validations.js"></script>
+      <script src="/loginJS/loading.js"></script>
+      <!-- jQuery library -->
+      <script src="assets/js/vendor/jquery-3.5.1.min.js"></script>
+      <!-- bootstrap js -->
+      <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
+      <!-- custom select js -->
+      <script src="assets/js/vendor/jquery.nice-select.min.js"></script>
+      <!-- lightcase js -->
+      <script src="assets/js/vendor/lightcase.js"></script>
+      <!-- wow js -->
+      <script src="assets/js/vendor/wow.min.js"></script>
+      <!-- slick slider js -->
+      <script src="assets/js/vendor/slick.min.js"></script>
+      <script src="assets/js/vendor/TweenMax.min.js"></script>
+      <!-- contact js -->
+      <script src="assets/js/contact.js"></script>
+
+      <script src="assets/js/vendor/jquery.paroller.min.js"></script>
+
+      <!-- custom js -->
+      <script src="assets/js/app.js"></script>
+  </body>
+</html>
